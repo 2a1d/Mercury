@@ -13,23 +13,22 @@ import {BrowserRouter as Router, Route} from "react-router-dom"
 
 function App(){
     return <Router>
-        <Header/>
+        <Header />
         <Route exact path="/">
-            <Homepage/>
+            <Homepage />
         </Route>
         <Route exact path="/travels">
-            <Travels/>
+            <Travels />
         </Route>
         <Route exact path="/signup">
-            <Signup/>
+            <Signup />
         </Route>
         <Route exact path="/login">
-            <Login/>
+            <Login />
         </Route>
-        <Search/>
-        <Footer/>
+        <Search />
+        <Footer />
     </Router>
-
 }
 
 export default App;
