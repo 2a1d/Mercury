@@ -26,7 +26,8 @@ function App(){
         <Route exact path="/login">
             <Login/>
         </Route>
-        {/* need to add the search button that has a pop out type space */}
+        <Search/>
+        <Footer/>
     </Router>
 
 }
