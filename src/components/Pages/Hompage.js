@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import Travels from "./Travels";
-import HeroSection from "../HeroSection.js"
+import HeroSection from "../HeroSection.js";
+import Cards from "../Cards.js";
+import Survey from "../Survey.js";
 
 function Homepage() {
     const [travels, setTravels] = useState([])
@@ -17,10 +19,12 @@ function Homepage() {
     return <div className="Container">
         <div className="Row">
             <ul>
-                {travels.map(item=>{return <Travels key={item.id} result={item}/>})}
+                {travels.map(item=>{return <Travels key={item.id} result={item} save={false}/>})}
             </ul>
         </div>
         <HeroSection/>
+        <Cards/>
+        <Survey/>
     </div>
 }
 
