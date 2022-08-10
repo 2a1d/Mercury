@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./Header";
-import Homepage from "./Hompage";
-import Travels from "./Travels";
-import Signup from "./Signup";
-import Login from "./Login";
-import Search from "./Search";
+import './App.css';
+import Nav from "./Nav";
+import Homepage from "./Pages/Hompage";
+import Travels from "./Pages/Travels";
+import Signup from "./Pages/Signup";
+import Login from "./Pages/Login";
 import Footer from "./Footer";
 
 
@@ -13,7 +13,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom"
 
 function App(){
     return <Router>
-        <Header />
+        <Nav />
         <Route exact path="/">
             <Homepage />
         </Route>
@@ -26,7 +26,6 @@ function App(){
         <Route exact path="/login">
             <Login />
         </Route>
-        <Search />
         <Footer />
     </Router>
 }
