@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import Homepage from "./Pages/Hompage";
 import Travels from "./Pages/Travels";
 import Signup from "./Pages/Signup";
-import Login from "./Pages/Login";
+import Search from "./Pages/Search";
 import Footer from "./Footer";
 
 
@@ -23,8 +23,8 @@ function App(){
         <Route exact path="/signup">
             <Signup />
         </Route>
-        <Route exact path="/login">
-            <Login />
+        <Route exact path="/search">
+            <Search />
         </Route>
         <Footer />
     </Router>

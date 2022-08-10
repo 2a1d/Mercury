@@ -22,9 +22,7 @@ function Homepage() {
                 {travels.map(item=>{return <Travels key={item.id} result={item} save={false}/>})}
             </ul>
         </div>
-        <HeroSection/>
-        <Cards/>
-        <Survey/>
+        <HeroSection />
     </div>
 }
 
