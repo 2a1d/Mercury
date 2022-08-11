@@ -12,13 +12,14 @@ function Search()
 
     function SearchLocation()
     {
-        const apiKey = Nk0VymVZ2OBdnr8Qw2J5l0yL86GM59BeYYtAHwvI
-        fetch("https://api.marketaux.com/v1/news/all?symbols="+text+"T&filter_entities=true&language=en&api_token="+apiKey)
+        const apiKey = "Nk0VymVZ2OBdnr8Qw2J5l0yL86GM59BeYYtAHwvI";
+        fetch("https://api.marketaux.com/v1/news/all?symbols="+text+"&filter_entities=true&language=en&api_token="+apiKey)
         .then((r)=>r.json())
         .then((data)=>{
-            if (data.Travels != null)
+            console.log(data);
+            if (data.data != null)
             {
-                const temporal = data.Travels.map(item=>{
+                const temporal = data.data.map(item=>{
                     return {
                         "id": item.idTravels,
                         "name": item.strLocation,
@@ -37,14 +38,13 @@ function Search()
         })
     }
 
-    function SaveSurveyDB(foundName, foundTimeZone, foundLanguage, foundNumber, foundCurrency)
+    function SaveSurveyDB(foundSymbol, foundTitle, foundDescription, foundHighlight)
     {
         const temporal = {
-            "name": foundName,
-            "time-zone": foundTimeZone,
-            "language": foundLanguage,
-            "emergency number": foundNumber,
-            "currency": foundCurrency
+            "symbol": foundSymbol,
+            "title": foundTitle,
+            "description": foundDescription,
+            "highlight": foundHighlight
         };
         fetch(
             "http://localhost:4000/Travels",
@@ -62,7 +62,7 @@ function Search()
 
     return <div>
         <input type="text" onChange={(e)=>HandleText(e)} />
-        <button onClick={SearchLocation}>Load Location</button>
+        <button onClick={SearchLocation}>Load News</button>
         <ul>
             {Survey.map(item=>{return <Survey key={item.id} result={item} save={true} handleSave={SaveSurveyDB} />})}
         </ul>

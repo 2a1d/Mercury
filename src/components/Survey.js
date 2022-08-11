@@ -4,17 +4,17 @@ function Survey({result, save, handleSave})
 {
     function SaveSurvey()
     {
-        handleSave(result.name, result.location, result.tips, result.mustSee);
+        handleSave(result.symbol, result.title, result.description, result.highlight);
     }
 
     return <div id={result.id} className="locationSurvey">
         <div className="panel panel-success">
-            <p className="panel-heading">Name: {result.name}</p>
+            <h1 className="panel-heading">Stock: {result.symbol}</h1>
             <div className="panel-body">
-                <h2>Location: {result.location}</h2>
-                <p>Tips: {result.tips}</p>
-                <p>Must see: {result.mustSee}</p>
-                {save ? <button className="saveBtn" onClick={SaveSurvey}>Save Travel</button> : ""}
+                <h2>Title: {result.title}</h2>
+                <p>Description: {result.description}</p>
+                <p>Highlight {result.highlight}</p>
+                {save ? <button className="saveBtn" onClick={SaveSurvey}>Save Stock</button> : ""}
             </div>
         </div>
     </div>

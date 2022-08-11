@@ -6,7 +6,7 @@ function HeroSection () {
         {/* <video src="" autoPlay loop muted/> */}
         <img src="./img/kalen-emsley-mgJSkgIo_JI-unsplash.jpeg" alt=""/>
         <h1>Mercury</h1>
-        <p>Adventure Awaits</p>
+        <p>Scandalous News Awaits</p>
     </div>;
 }
 
