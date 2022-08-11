@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import '../Signup.css'
 
 function Signup()
 {
@@ -41,9 +42,10 @@ function Signup()
     }
 
     return <div>
-        <form onSubmit={onSubmitForm}>
-            <label>Name:</label>
+        <form className="signupForm" onSubmit={onSubmitForm}>
+            <label className="lableContainer">Name:</label>
             <input
+                className="inputLable"
                 value={signupSurvey.firstName}
                 type="text"
                 name="firstName"
@@ -52,6 +54,7 @@ function Signup()
                 placeholder="First Name"
             />
             <input
+                className="inputLable"
                 value={signupSurvey.lastName}
                 type="text"
                 name="lastName"
@@ -60,8 +63,9 @@ function Signup()
                 placeholder="Last Name"
             />
             <br/>
-            <label>Email:</label>
+            <label className="lableContainer">Email:</label>
             <input
+                className="inputLable"
                 value={signupSurvey.email}
                 type="email"
                 name="email"
@@ -69,8 +73,9 @@ function Signup()
                 placeholder="email"
             />
             <br/>
-            <label>Password:</label>
+            <label className="lableContainer">Password:</label>
             <input
+                className="inputLable"
                 value={signupSurvey.password}
                 type="password"
                 name="password"
@@ -78,7 +83,7 @@ function Signup()
                 placeholder="password"
             />
             <br/>
-            <button type="submit">Sign Up</button>
+            <button className="signupBtn" type="submit">Sign Up</button>
         </form>
     </div>;
 }

@@ -1,11 +1,18 @@
 {
-    "Stock": [
-      {
-        "id": 1,
-        "firstName": "Netherlands",
-        "lastName": "asd asd asd as",
-        "email": "Europe/Amsterdam",
-        "password": "Dutch"
-      }
-    ]
-  }
+  "Stock": [
+    {
+      "id": 1,
+      "firstName": "Netherlands",
+      "lastName": "asd asd asd as",
+      "email": "Europe/Amsterdam",
+      "password": "Dutch"
+    },
+    {
+      "firstName": "Jackson",
+      "lastName": "Peacock",
+      "email": "jacksonpeacock0@gmail.com",
+      "password": "asdasdfasd",
+      "id": 2
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../Search.css';
 import Survey from "../Survey";
 
 function Search()
@@ -44,23 +45,23 @@ function Search()
             "description": foundDescription,
             "highlight": foundHighlight
         };
-        fetch(
-            "http://localhost:4000/Stock",
-            {
-                method: "POST",
-                body: JSON.stringify(temporal),
-                headers: { "Content-Type": "application/json" }
-            }
-        )
-        .then(response=>response.json())
-        .then((data)=>{
-            console.log(data);
-        })
+        // fetch(
+        //     "http://localhost:4000/Stock",
+        //     {
+        //         method: "POST",
+        //         body: JSON.stringify(temporal),
+        //         headers: { "Content-Type": "application/json" }
+        //     }
+        // )
+        // .then(response=>response.json())
+        // .then((data)=>{
+        //     console.log(data);
+        // })
     }
 
-    return <div>
-        <input type="text" onChange={(e)=>HandleText(e)} />
-        <button onClick={SearchStock}>Load News</button>
+    return <div className="searchContainer">
+        <input placeholder="search" type="text" onChange={(e)=>HandleText(e)} />
+        <button className="searchBtn" onClick={SearchStock}>Load News</button>
         <ul>
             {stock.map(item=>{return <Survey key={item.id} result={item} save={true} handleSave={SaveStockDB} />})}
         </ul>
