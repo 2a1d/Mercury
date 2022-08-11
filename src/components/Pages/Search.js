@@ -21,12 +21,11 @@ function Search()
             {
                 const temporal = data.data.map(item=>{
                     return {
-                        "id": item.idTravels,
-                        "name": item.strLocation,
-                        "time-zone": item.strTimeZone,
-                        "language": item.strLanguage ,
-                        "emergency-number": item.strNumber,
-                        "currency": item.strCurrency
+                        "id": item.idStock,
+                        "symbol": item.strSymbol,
+                        "title": item.strTitle,
+                        "description": item.strDescription,
+                        "highlight": item.strHighlight
                     }
                 });
                 setStock(temporal);
@@ -47,7 +46,7 @@ function Search()
             "highlight": foundHighlight
         };
         fetch(
-            "http://localhost:4000/Travels",
+            "http://localhost:4000/Stock",
             {
                 method: "POST",
                 body: JSON.stringify(temporal),
