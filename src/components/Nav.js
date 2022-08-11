@@ -11,12 +11,13 @@ function Nav()
             </NavLink>
             <NavLink exact to="/" className="navbar-location">Home
             </NavLink>
-            <NavLink exact to="/Travels" className="navbar-location">Travles
+            {/* <NavLink exact to="/Travels" className="navbar-location">Travles
+            </NavLink> */}
+            <NavLink exact to="/Search" className="navbar-location">Search
             </NavLink>
             <NavLink exact to="/Signup" className="navbar-location">Signup
             </NavLink>
-            <NavLink exact to="/Search" className="navbar-location">Search
-            </NavLink>
+            
         </div>
     </div>
 }
