@@ -4,13 +4,13 @@ import Survey from "../Survey";
 function Search()
 {
     const [text,setText] = useState("");
-    const [Survey,setSurvey] = useState([]);
+    const [stock,setStock] = useState([]);
     function HandleText(e)
     {
         setText(e.target.value);
     }
 
-    function SearchLocation()
+    function SearchStock()
     {
         const apiKey = "Nk0VymVZ2OBdnr8Qw2J5l0yL86GM59BeYYtAHwvI";
         fetch("https://api.marketaux.com/v1/news/all?symbols="+text+"&filter_entities=true&language=en&api_token="+apiKey)
@@ -29,7 +29,7 @@ function Search()
                         "currency": item.strCurrency
                     }
                 });
-                setSurvey(temporal);
+                setStock(temporal);
             }
             else
             {
@@ -38,7 +38,7 @@ function Search()
         })
     }
 
-    function SaveSurveyDB(foundSymbol, foundTitle, foundDescription, foundHighlight)
+    function SaveStockDB(foundSymbol, foundTitle, foundDescription, foundHighlight)
     {
         const temporal = {
             "symbol": foundSymbol,
@@ -62,9 +62,9 @@ function Search()
 
     return <div>
         <input type="text" onChange={(e)=>HandleText(e)} />
-        <button onClick={SearchLocation}>Load News</button>
+        <button onClick={SearchStock}>Load News</button>
         <ul>
-            {Survey.map(item=>{return <Survey key={item.id} result={item} save={true} handleSave={SaveSurveyDB} />})}
+            {stock.map(item=>{return <Survey key={item.id} result={item} save={true} handleSave={SaveStockDB} />})}
         </ul>
     </div>;
 }

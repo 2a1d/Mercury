@@ -2,7 +2,6 @@ import React from "react";
 import './App.css';
 import Nav from "./Nav";
 import Homepage from "./Pages/Hompage";
-import Travels from "./Pages/Travels";
 import Signup from "./Pages/Signup";
 import Search from "./Pages/Search";
 import Footer from "./Footer";
@@ -16,9 +15,6 @@ function App(){
         <Nav />
         <Route exact path="/">
             <Homepage />
-        </Route>
-        <Route exact path="/travels">
-            <Travels />
         </Route>
         <Route exact path="/signup">
             <Signup />
