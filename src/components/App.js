@@ -5,9 +5,6 @@ import Homepage from "./Pages/Hompage";
 import Signup from "./Pages/Signup";
 import Search from "./Pages/Search";
 import Footer from "./Footer";
-
-
-
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
 function App(){

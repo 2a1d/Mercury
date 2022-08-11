@@ -21,11 +21,10 @@ function Search()
             {
                 const temporal = data.data.map(item=>{
                     return {
-                        "id": item.idStock,
-                        "symbol": item.strSymbol,
-                        "title": item.strTitle,
-                        "description": item.strDescription,
-                        "highlight": item.strHighlight
+                        "id": item.uuid,
+                        // "image": item.image_url,
+                        "title": item.title,
+                        "description": item.description,
                     }
                 });
                 setStock(temporal);

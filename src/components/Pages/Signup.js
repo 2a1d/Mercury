@@ -1,31 +1,8 @@
-// import React from "react";
-
-// function Signup() {
-//     return <form>
-//         <label>
-//             Name:
-//             <input type="text" name="firstName" placeholder="first name"/>
-//             <input type="text" name="lastName" placeholder="last name"/>
-//         </label>
-//         <label>
-//             Email:
-//             <input type="email" name="email" placeholder="email"/>
-//         </label>
-//         <label>
-//             Password:
-//             <input type="password" name="password" placeholder="password"/>
-//         </label>
-//         <input type="submit" value="Submit"/>
-//     </form>
-// }
-
-// export default Signup;
-
 import React, {useEffect, useState} from "react";
 
 function Signup()
 {
-    const [Survey, setSurvey] = useState({
+    const [signupSurvey, setSignupSurvey] = useState({
         firstName:'',
         lastName:'',
         email: '',
@@ -36,13 +13,13 @@ function Signup()
     {
         e.preventDefault();
         const temp = {
-            firstName: Survey.firstName,
-            lastName: Survey.lastName,
-            email: Survey.email,
-            password: Survey.password
+            firstName: signupSurvey.firstName,
+            lastName: signupSurvey.lastName,
+            email: signupSurvey.email,
+            password: signupSurvey.password
         }
         fetch(
-            "http://localhost:4000/Travels",
+            "http://localhost:4000/Stock",
             {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -57,8 +34,8 @@ function Signup()
 
     function SetText(e)
     {
-        setSurvey({
-           ...Survey,
+        setSignupSurvey({
+           ...signupSurvey,
            [e.target.name]: e.target.value
         });
     }
@@ -67,7 +44,7 @@ function Signup()
         <form onSubmit={onSubmitForm}>
             <label>Name:</label>
             <input
-                value={Survey.firstName}
+                value={signupSurvey.firstName}
                 type="text"
                 name="firstName"
                 onChange={(e)=>SetText(e)}
@@ -75,7 +52,7 @@ function Signup()
                 placeholder="First Name"
             />
             <input
-                value={Survey.lastName}
+                value={signupSurvey.lastName}
                 type="text"
                 name="lastName"
                 onChange={(e)=>SetText(e)}
@@ -85,7 +62,7 @@ function Signup()
             <br/>
             <label>Email:</label>
             <input
-                value={Survey.email}
+                value={signupSurvey.email}
                 type="email"
                 name="email"
                 onChange={(e)=>SetText(e)}
@@ -94,7 +71,7 @@ function Signup()
             <br/>
             <label>Password:</label>
             <input
-                value={Survey.password}
+                value={signupSurvey.password}
                 type="password"
                 name="password"
                 onChange={(e)=>SetText(e)}
