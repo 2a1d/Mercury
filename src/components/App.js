@@ -20,9 +20,9 @@ function App(){
         <Route exact path="/travels">
             <Travels />
         </Route>
-        <Route exact path="/signup">
+        {/* <Route exact path="/signup">
             <Signup />
-        </Route>
+        </Route> */}
         <Route exact path="/search">
             <Search />
         </Route>

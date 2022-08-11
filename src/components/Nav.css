@@ -8,14 +8,19 @@
     position: sticky;
     top: 0;
     z-index: 999;
+        
 }
 
 .navbar-location {
-    margin-left: 2em;
+    margin-left: 3em;
     margin-top: 5em;
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 };
 
-#logoBtn {
+.logoBtn {
     border: none;
     outline: none;
     background: none;
