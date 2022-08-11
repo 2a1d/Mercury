@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Survey from "../Survey";
 
 function Search()
@@ -12,7 +12,8 @@ function Search()
 
     function SearchLocation()
     {
-        fetch("https://travelbriefing.org/"+text+"?format=json")
+        const apiKey = Nk0VymVZ2OBdnr8Qw2J5l0yL86GM59BeYYtAHwvI
+        fetch("https://api.marketaux.com/v1/news/all?symbols="+text+"T&filter_entities=true&language=en&api_token="+apiKey)
         .then((r)=>r.json())
         .then((data)=>{
             if (data.Travels != null)

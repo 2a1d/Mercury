@@ -2,30 +2,10 @@
     "Travels": [
       {
         "id": 1,
-        "name": "Netherlands",
-        "maps": "asd asd asd as",
-        "time-zone": "Europe/Amsterdam",
-        "language": "Dutch",
-        "emergency-number": "112",
-        "currency":"Euro"
-      },
-      {
-        "id": 2,
-        "name": "Aus",
-        "maps": "asd asd asd as",
-        "time-zone": "Europe/Amsterdam",
-        "language": "Dutch",
-        "emergency-number": "112",
-        "currency":"Euro"
-      },
-      {
-        "id": 3,
-        "name": "Netherlands",
-        "maps": "asd asd asd as",
-        "time-zone": "Europe/Amsterdam",
-        "language": "Dutch",
-        "emergency-number": "112",
-        "currency":"Euro"
+        "firstName": "Netherlands",
+        "lastName": "asd asd asd as",
+        "email": "Europe/Amsterdam",
+        "password": "Dutch"
       }
     ]
   }

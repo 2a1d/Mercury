@@ -58,7 +58,7 @@ function Signup()
     function SetText(e)
     {
         setSurvey({
-           ...survey,
+           ...Survey,
            [e.target.name]: e.target.value
         });
     }
